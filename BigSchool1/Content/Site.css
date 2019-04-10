@@ -32,8 +32,8 @@
 
 .course > li .date {
             text-align: center;
-            background-color: #1aa7dd;
-            color: #ffffff;
+            background-color: crimson;
+            color: aliceblue;
             width: 60px;
             border-radius: 8px;
         }
