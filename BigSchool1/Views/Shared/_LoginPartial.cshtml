@@ -9,11 +9,11 @@
         <li class="dropdown" id="dropdown1">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> @User.Identity.GetUserName()<span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="#"> My Upcoming Courses</a></li>
-                <li><a href="@Url.Action("Attending","Courses")"> Course I'm Going</a></li>
-                <li><a href="#"> Lecture I'm Flowing</a></li>
+                <li><a href="@Url.Action("Mine","Courses")">Khóa học tôi đã thêm</a></li>
+                <li><a href="@Url.Action("Attending","Courses")">Khóa học tôi đang tham dự</a></li>
+                <li><a href="@Url.Action("Following","Courses")">Giảng viên tôi theo dõi</a></li>
                 <li role="separator" class="divider"></li>
-                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Đăng xuất</a></li>
             </ul>
         </li>
     </ul>

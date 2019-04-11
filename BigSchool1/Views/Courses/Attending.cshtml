@@ -1,6 +1,6 @@
 ﻿@model BigSchool1.ViewModels.CoursesViewModel
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Attending";
 }
 
 <ul class="course" style="margin-top:70px">
@@ -35,21 +35,3 @@
         </li>
     }
 </ul>
-@section scripts
-    {
-    <script>
-        $(document).ready(function () {
-            CoursesController.init();
-            $(".js-toggle-follow").click(function (e) {
-                var button = $(e.target);
-                $.post("/api/followings", { followeeId: button.attr("data-user-id") })
-                    .done(function () {
-                        button.text("Following");
-                    })
-                    .fail(function () {
-                        alert("Something failed!");
-                    });
-            });
-        });
-    </script>
-}
