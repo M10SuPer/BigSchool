@@ -18,7 +18,10 @@
 .navbar-inverse .navbar-nav > .open > a:focus {
         background-color: #4eccfc;
     }
-
+button.navbar-collapse{
+    padding:2px 6px;
+    background-color:#ffd800
+}
 /* Coure Layout*/
 .course {
     list-style: none;
