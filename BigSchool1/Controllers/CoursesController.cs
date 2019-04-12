@@ -55,7 +55,7 @@ namespace BigSchool1.Controllers
         {
             var userId = User.Identity.GetUserId();
             var courses = _dbContext.Courses
-                .Where(c => c.LecturerId == userId && c.DateTime > DateTime.Now)
+                .Where(c => c.LecturerId == userId && c.DateTime > DateTime.Now && c.IsCanceled==false)
                 .Include(l => l.Lecturer)
                 .Include(c => c.Category)
                 .ToList();
@@ -89,7 +89,7 @@ namespace BigSchool1.Controllers
             var userId = User.Identity.GetUserId();
 
             var follow = _dbContext.Followings
-                .Where(a => a.FollowerId == userId)
+                .Where(a => a.FollowerId == userId )
                 .Select(a => a.Followee)
                 .ToList();
 
